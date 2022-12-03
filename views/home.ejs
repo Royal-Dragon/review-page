@@ -1,0 +1,11 @@
+<%- include('partials/header') %>
+ 
+ <h1> Home</h1> 
+ <p><%=ejs%></p>
+ <% ejs2.forEach(function(ej){ %>
+ <h1><%=ej.subhead%></h1>
+ <p><%=ej.para.substring(0,100)+ "..."%><a href="/posts/<%=ej.subhead%>">Read more</a></p>
+ 
+ <% })%>
+
+ <%- include('partials/footer') %>
