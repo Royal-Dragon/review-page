@@ -1,4 +1,10 @@
-<%- include('partials/header') %>
 
+<h1>you have to log in to continue</h1>
+<ul>
+    <% if( ejs === true){%>
+        <li><a href="/logout/">logout</a></li>
+     <% } else {%>
+        <li><a href="/login/">login</a></li>
+     <%}%>
+</ul>
 
-<%- include('partials/footer') %>

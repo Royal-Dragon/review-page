@@ -54,7 +54,7 @@ else{
   
 res.render("home",{ejs : homeStartingContent , ejs2:founditems , ejs3: req.oidc.isAuthenticated() });}
   });
-} else res.send("<h1>logged out  go to /login for webpage <h1>" );  
+} else res.render("hero",{ejs :req.oidc.isAuthenticated() }); 
 });
 
 app.get("/about",function(req,res){
