@@ -10,8 +10,10 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "dotenv": "^16.0.3",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
+    "express-openid-connect": "^2.10.0",
     "lodash": "^4.17.21",
     "mongoose": "^6.7.5",
     "readmore-js": "^2.2.1"
