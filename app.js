@@ -13,10 +13,10 @@ require("dotenv").config()
 const config = {
   authRequired: false,
   auth0Logout: true,
-  secret:   process.env.SECRET,
-  baseURL: process.env.BASEURL,
-  clientID: process.env.CLIENTID,
-  issuerBaseURL: process.env.ISSUERBASEURL
+  secret: process.env.SEC,
+  baseURL:  process.env.BAS,
+  clientID:  process.env.CID,
+  issuerBaseURL: process.env.ISSUE
 };
 
 const app = express();
@@ -58,16 +58,16 @@ res.render("home",{ejs : homeStartingContent , ejs2:founditems , ejs3: req.oidc.
 });
 
 app.get("/about",function(req,res){
-  res.render("about",{ejs : aboutContent});
+  res.render("about",{ejs : aboutContent,ejs3: req.oidc.isAuthenticated()});
 });
 
 
 app.get("/contact",function(req,res){
-  res.render("contact",{ejs : contactContent});
+  res.render("contact",{ejs : contactContent, ejs3: req.oidc.isAuthenticated()});
 });
 
 app.get("/compose",function(req,res){
-  res.render("compose");
+  res.render("compose",{ejs3: req.oidc.isAuthenticated()});
   
 });
 
