@@ -1,9 +1,46 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<h1>you have to log in to continue</h1>
-<ul>
-    <% if( ejs === true){%>
-        <li><a href="/logout/">logout</a></li>
-     <% } else {%>
-        <li><a href="/login/">login</a></li>
-     <%}%>
-</ul>
+<div class="container">
+	<div class="row py-5">
+		<div class="col-lg-1 d-none d-lg-flex align-items-center">
+			<div class="lc-block d-flex" style="writing-mode: vertical-rl; transform:rotate(180deg)">
+				<a class="btn btn-link my-2 text-dark text-decoration-none" href="#" role="button">Facebook</a>
+				<a class="btn btn-link my-4 text-dark text-decoration-none" href="#" role="button">Twitter</a>
+				<a class="btn btn-link my-2 text-dark text-decoration-none" href="#" role="button">Youtube</a>
+			</div><!-- /lc-block -->
+		</div><!-- /col -->
+		<div class="col-sm-6 d-flex d-lg-none flex-sm-column align-items-center justify-content-around mb-4 mb-sm-0">
+			<div class="lc-block">
+				<a class="btn btn-link text-dark text-decoration-none" href="#" role="button">Facebook</a>
+
+			</div>
+			<div class="lc-block">
+				<a class="btn btn-link text-dark text-decoration-none" href="#" role="button">Twitter</a>
+
+			</div>
+			<div class="lc-block">
+				<a class="btn btn-link text-dark text-decoration-none" href="#" role="button">Youtube</a>
+
+			</div>
+		</div>
+		<div class="col-lg-4 col-sm-6">
+			<div class="lc-block ratio ratio-1x1">
+				<img style="object-fit:cover" class="img-fluid" src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8YW5pbWV8ZW58MHx8MHx8&auto=format&fit=crop&w=2000&q=60&amp;w=1080&amp;h=768" alt="use better network u dumb fuck">
+			</div><!-- /lc-block -->
+		</div><!-- /col -->
+		<div class="col-lg-4 offset-lg-1">
+			<div class="lc-block my-5">
+				<div editable="rich">
+					<h2 class="rfs-25">Write Your Prespective on Your favourite Anime!</h2>
+				</div>
+			</div>
+			<div class="lc-block my-5">
+				<div editable="rich">
+					<p>a review page where you get to write your review on the recent anime you seen so it can be shared across the word for others to read anonymous</p>
+				</div>
+			</div><!-- /lc-block -->
+			<div class="lc-block">
+				<a class="btn btn-primary btn-lg" href="/login/" role="button">Login</a>
+			</div><!-- /lc-block -->
+		</div><!-- /col -->
+	</div>
+</div>
