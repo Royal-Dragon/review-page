@@ -28,7 +28,7 @@ app.use(auth(config));
 
 
 
-mongoose.connect('mongodb+srv://Abhiram_royals:jfmamjjasond@cluster0.khkndxp.mongodb.net/reviewDB');
+mongoose.connect('mongodb+srv://Abhiram_royals:jfmamjjasond@cluster0.9cyqvfw.mongodb.net/?retryWrites=true&w=majority');
 
 const reviewSchema = new mongoose.Schema({
   subhead: String,
@@ -87,7 +87,7 @@ app.get("/posts/:postName",function(req,res){
   Review.findOne({subhead: newUrl},function(err,foundOne){
     if(err) console.log(err);
     else {
-      res.render("post",{ejs : foundOne.subhead, ejs2:foundOne.para});
+      res.render("post",{ejs : foundOne.subhead, ejs2:foundOne.para,ejs3: req.oidc.isAuthenticated()});
   
     }
   })
